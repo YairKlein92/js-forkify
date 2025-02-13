@@ -1,4 +1,4 @@
-4457
+4462
 87C:\Users\sympl\projects\javascript-forkify-app\node_modules\caniuse-lite\data\agents.js133838476245610000 0
 69C:\Users\sympl\projects\javascript-forkify-app\node_modules\@mischnic133838478167903441 1
 102C:\Users\sympl\projects\javascript-forkify-app\node_modules\@swc\helpers\_\_class_apply_descriptor_set133838478176563476 1
@@ -13,11 +13,11 @@
 101C:\Users\sympl\projects\javascript-forkify-app\node_modules\@swc\helpers\src\_to_consumable_array.mjs133838477240370000 0
 57C:\Users\sympl\projects\javascript-forkify-app\.gitignore133838476777921198 0
 50C:\Users\sympl\projects\javascript-forkify-app\src133838399951149481 1
-67C:\Users\sympl\projects\javascript-forkify-app\src\js\controller.js133838511860279331 0
+67C:\Users\sympl\projects\javascript-forkify-app\src\js\controller.js133838530381854542 0
 116C:\Users\sympl\projects\javascript-forkify-app\node_modules\dom-serializer\node_modules\domhandler\lib\esm\node.d.ts133773646685820000 0
 109C:\Users\sympl\projects\javascript-forkify-app\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\Makefile133838481149097812 0
 111C:\Users\sympl\projects\javascript-forkify-app\node_modules\@swc\helpers\cjs\_iterable_to_array_limit_loose.cjs133838477240370000 0
-51C:\Users\sympl\projects\javascript-forkify-app\dist133838511860543132 1
+51C:\Users\sympl\projects\javascript-forkify-app\dist133838530382070930 1
 58C:\Users\sympl\projects\javascript-forkify-app\.prettierrc133838398631059292 0
 68C:\Users\sympl\projects\javascript-forkify-app\node_modules\get-port133838476646060645 1
 83C:\Users\sympl\projects\javascript-forkify-app\node_modules\@swc\types\package.json133838477245330000 0
@@ -38,7 +38,7 @@
 68C:\Users\sympl\projects\javascript-forkify-app\node_modules\argparse133838478171402308 1
 91C:\Users\sympl\projects\javascript-forkify-app\node_modules\caniuse-lite\data\regions\MG.js133838476245610000 0
 68C:\Users\sympl\projects\javascript-forkify-app\node_modules\posthtml133838476652548242 1
-57C:\Users\sympl\projects\javascript-forkify-app\index.html133838499858531754 0
+57C:\Users\sympl\projects\javascript-forkify-app\index.html133838529098301180 0
 105C:\Users\sympl\projects\javascript-forkify-app\node_modules\@swc\helpers\esm\_interop_require_wildcard.js133838477240370000 0
 91C:\Users\sympl\projects\javascript-forkify-app\node_modules\caniuse-lite\data\regions\AS.js133838476245610000 0
 67C:\Users\sympl\projects\javascript-forkify-app\node_modules\@parcel133838499876978898 1
@@ -76,7 +76,7 @@
 91C:\Users\sympl\projects\javascript-forkify-app\node_modules\semver\ranges\max-satisfying.js133838481149271685 0
 101C:\Users\sympl\projects\javascript-forkify-app\node_modules\htmlparser2\lib\esm\WritableStream.js.map133838477856210000 0
 84C:\Users\sympl\projects\javascript-forkify-app\node_modules\htmlnano\lib\helpers.mjs133838477242860000 0
-54C:\Users\sympl\projects\javascript-forkify-app\src\img133838399950992714 1
+54C:\Users\sympl\projects\javascript-forkify-app\src\img133838524746750406 1
 69C:\Users\sympl\projects\javascript-forkify-app\src\sass\_preview.scss133838398636758488 0
 98C:\Users\sympl\projects\javascript-forkify-app\node_modules\posthtml\node_modules\entities\LICENSE133838476288980000 0
 53C:\Users\sympl\projects\javascript-forkify-app\src\js133838480106003719 1
@@ -134,6 +134,11 @@
 66C:\Users\sympl\projects\javascript-forkify-app\node_modules\srcset133838481148617083 1
 81C:\Users\sympl\projects\javascript-forkify-app\node_modules\get-port\package.json133838476133850000 0
 66C:\Users\sympl\projects\javascript-forkify-app\src\img\favicon.png133838398633908503 0
+119C:\Users\sympl\projects\javascript-forkify-app\node_modules\lmdb\dependencies\lz4\lib\dll\example\fullbench-dll.vcxproj133838481154856248 0
+107C:\Users\sympl\projects\javascript-forkify-app\node_modules\domutils\node_modules\domhandler\lib\index.d.ts133773646685820000 0
+63C:\Users\sympl\projects\javascript-forkify-app\src\img\icon.png133838521397151667 0
+79C:\Users\sympl\projects\javascript-forkify-app\node_modules\safe-buffer\LICENSE133297553815940000 0
+92C:\Users\sympl\projects\javascript-forkify-app\node_modules\term-size\vendor\macos\term-size133838476144600000 0
 91C:\Users\sympl\projects\javascript-forkify-app\node_modules\caniuse-lite\data\regions\SC.js133838476245610000 0
 64C:\Users\sympl\projects\javascript-forkify-app\src\img\icons.svg133838398634226207 0
 99C:\Users\sympl\projects\javascript-forkify-app\node_modules\@swc\helpers\esm\_async_to_generator.js133838477240370000 0
@@ -183,7 +188,6 @@
 121C:\Users\sympl\projects\javascript-forkify-app\node_modules\posthtml\node_modules\htmlparser2\lib\WritableStream.d.ts.map133838476267630000 0
 86C:\Users\sympl\projects\javascript-forkify-app\node_modules\@parcel\workers\index.d.ts133838477237570000 0
 65C:\Users\sympl\projects\javascript-forkify-app\node_modules\@lmdb133838478167903441 1
-67C:\Users\sympl\projects\javascript-forkify-app\node_modules\globals133838476646162591 1
 89C:\Users\sympl\projects\javascript-forkify-app\node_modules\htmlparser2\lib\esm\Parser.js133838477856210000 0
 71C:\Users\sympl\projects\javascript-forkify-app\node_modules\ansi-styles133838476641752451 1
 109C:\Users\sympl\projects\javascript-forkify-app\node_modules\posthtml\node_modules\entities\lib\index.d.ts.map133838476288980000 0
@@ -258,6 +262,7 @@
 101C:\Users\sympl\projects\javascript-forkify-app\node_modules\@parcel\package-manager\node_modules\.bin133838478197757503 1
 80C:\Users\sympl\projects\javascript-forkify-app\node_modules\sass\sass.default.js133838481154452253 0
 68C:\Users\sympl\projects\javascript-forkify-app\node_modules\escalade133838476645116795 1
+67C:\Users\sympl\projects\javascript-forkify-app\node_modules\globals133838476646162591 1
 93C:\Users\sympl\projects\javascript-forkify-app\node_modules\htmlnano\docs\docs\040-presets.md133838477242860000 0
 93C:\Users\sympl\projects\javascript-forkify-app\node_modules\lmdb\dependencies\lz4\lib\lz4hc.c133838481150102696 0
 68C:\Users\sympl\projects\javascript-forkify-app\node_modules\has-flag133838478171762145 1
@@ -887,10 +892,6 @@
 88C:\Users\sympl\projects\javascript-forkify-app\node_modules\domutils\lib\legacy.d.ts.map133838477894080000 0
 92C:\Users\sympl\projects\javascript-forkify-app\node_modules\term-size\vendor\macos\.DS_Store133838476144600000 0
 89C:\Users\sympl\projects\javascript-forkify-app\node_modules\@swc\helpers\esm\_decorate.js133838477240370000 0
-119C:\Users\sympl\projects\javascript-forkify-app\node_modules\lmdb\dependencies\lz4\lib\dll\example\fullbench-dll.vcxproj133838481154856248 0
-107C:\Users\sympl\projects\javascript-forkify-app\node_modules\domutils\node_modules\domhandler\lib\index.d.ts133773646685820000 0
-79C:\Users\sympl\projects\javascript-forkify-app\node_modules\safe-buffer\LICENSE133297553815940000 0
-92C:\Users\sympl\projects\javascript-forkify-app\node_modules\term-size\vendor\macos\term-size133838476144600000 0
 83C:\Users\sympl\projects\javascript-forkify-app\node_modules\@parcel\fs\src\index.js133838477222350000 0
 85C:\Users\sympl\projects\javascript-forkify-app\node_modules\supports-color\browser.js133297554572580000 0
 87C:\Users\sympl\projects\javascript-forkify-app\node_modules\supports-color\package.json133297554572580000 0
@@ -1053,15 +1054,15 @@
 72C:\Users\sympl\projects\javascript-forkify-app\node_modules\htmlnano\lib133838478197026690 1
 82C:\Users\sympl\projects\javascript-forkify-app\node_modules\semver\functions\lt.js133838481149271685 0
 92C:\Users\sympl\projects\javascript-forkify-app\node_modules\@swc\helpers\scripts\ast_grep.js133838477240370000 0
+98C:\Users\sympl\projects\javascript-forkify-app\node_modules\@swc\helpers\src\_array_with_holes.mjs133838477240370000 0
+116C:\Users\sympl\projects\javascript-forkify-app\node_modules\@parcel\runtime-js\lib\helpers\browser\preload-loader.js133838477226410000 0
+105C:\Users\sympl\projects\javascript-forkify-app\node_modules\posthtml\node_modules\domutils\lib\helpers.js133764259468930000 0
 79C:\Users\sympl\projects\javascript-forkify-app\node_modules\braces\lib\utils.js133764259249420000 0
 85C:\Users\sympl\projects\javascript-forkify-app\node_modules\@parcel\optimizer-css\lib133838478172552616 1
 78C:\Users\sympl\projects\javascript-forkify-app\node_modules\js-tokens\index.js133297553798270000 0
 77C:\Users\sympl\projects\javascript-forkify-app\node_modules\react-refresh\cjs133838478175874322 1
 83C:\Users\sympl\projects\javascript-forkify-app\node_modules\semver\functions\lte.js133838481149271685 0
 96C:\Users\sympl\projects\javascript-forkify-app\node_modules\caniuse-lite\data\features\jpegxr.js133838476245610000 0
-98C:\Users\sympl\projects\javascript-forkify-app\node_modules\@swc\helpers\src\_array_with_holes.mjs133838477240370000 0
-116C:\Users\sympl\projects\javascript-forkify-app\node_modules\@parcel\runtime-js\lib\helpers\browser\preload-loader.js133838477226410000 0
-105C:\Users\sympl\projects\javascript-forkify-app\node_modules\posthtml\node_modules\domutils\lib\helpers.js133764259468930000 0
 91C:\Users\sympl\projects\javascript-forkify-app\node_modules\caniuse-lite\data\regions\SM.js133838476245610000 0
 80C:\Users\sympl\projects\javascript-forkify-app\node_modules\json5\lib\index.d.ts133838481145629330 0
 75C:\Users\sympl\projects\javascript-forkify-app\node_modules\detect-libc\lib133838481146937757 1
@@ -1071,8 +1072,6 @@
 84C:\Users\sympl\projects\javascript-forkify-app\node_modules\sass\types\importer.d.ts133838481154709824 0
 83C:\Users\sympl\projects\javascript-forkify-app\node_modules\semver\functions\neq.js133838481149271685 0
 99C:\Users\sympl\projects\javascript-forkify-app\node_modules\caniuse-lite\data\features\atob-btoa.js133838476245610000 0
-83C:\Users\sympl\projects\javascript-forkify-app\node_modules\js-yaml\dist\js-yaml.js133838481145629330 0
-91C:\Users\sympl\projects\javascript-forkify-app\node_modules\caniuse-lite\data\regions\WS.js133838476245610000 0
 113C:\Users\sympl\projects\javascript-forkify-app\node_modules\posthtml\node_modules\posthtml-parser\dist\index.d.ts133838476217040000 0
 106C:\Users\sympl\projects\javascript-forkify-app\node_modules\domutils\node_modules\domhandler\lib\node.d.ts133773646685820000 0
 73C:\Users\sympl\projects\javascript-forkify-app\node_modules\lmdb\write.js133838481153097069 0
@@ -1099,6 +1098,7 @@
 74C:\Users\sympl\projects\javascript-forkify-app\node_modules\sass\README.md133838481154505706 0
 103C:\Users\sympl\projects\javascript-forkify-app\node_modules\lmdb\node_modules\node-addon-api\LICENSE.md133838477245100000 0
 113C:\Users\sympl\projects\javascript-forkify-app\node_modules\@swc\helpers\_\_interop_require_wildcard\package.json133838477240370000 0
+70C:\Users\sympl\projects\javascript-forkify-app\dist\icons.dfd7a6db.svg133838525388368897 0
 78C:\Users\sympl\projects\javascript-forkify-app\node_modules\sass\sass.node.mjs133838481154505706 0
 92C:\Users\sympl\projects\javascript-forkify-app\node_modules\@swc\helpers\_\_array_with_holes133838478176520379 1
 70C:\Users\sympl\projects\javascript-forkify-app\node_modules\sass\types133838481154779800 1
@@ -1671,7 +1671,7 @@
 101C:\Users\sympl\projects\javascript-forkify-app\node_modules\caniuse-lite\data\features\css-opacity.js133838476245610000 0
 131C:\Users\sympl\projects\javascript-forkify-app\node_modules\msgpackr-extract\node_modules\node-gyp-build-optional-packages\index.js133838481147608298 0
 140C:\Users\sympl\projects\javascript-forkify-app\node_modules\msgpackr-extract\node_modules\node-gyp-build-optional-packages\node-gyp-build.js133838481147618340 0
-74C:\Users\sympl\projects\javascript-forkify-app\dist\index.f7626f62.css.map133838508082319929 0
+74C:\Users\sympl\projects\javascript-forkify-app\dist\index.f7626f62.css.map133838525387877208 0
 85C:\Users\sympl\projects\javascript-forkify-app\node_modules\domhandler\lib\index.d.ts133764259468960000 0
 114C:\Users\sympl\projects\javascript-forkify-app\node_modules\domutils\node_modules\domhandler\lib\esm\node.d.ts.map133773646685820000 0
 132C:\Users\sympl\projects\javascript-forkify-app\node_modules\msgpackr-extract\node_modules\node-gyp-build-optional-packages\README.md133838481147618340 0
@@ -1991,6 +1991,8 @@
 94C:\Users\sympl\projects\javascript-forkify-app\node_modules\@parcel\core\src\CommittedAsset.js133838477221190000 0
 83C:\Users\sympl\projects\javascript-forkify-app\node_modules\js-yaml\lib\type\set.js133838481145794961 0
 90C:\Users\sympl\projects\javascript-forkify-app\node_modules\js-yaml\lib\schema\failsafe.js133838481145629330 0
+83C:\Users\sympl\projects\javascript-forkify-app\node_modules\js-yaml\dist\js-yaml.js133838481145629330 0
+91C:\Users\sympl\projects\javascript-forkify-app\node_modules\caniuse-lite\data\regions\WS.js133838476245610000 0
 90C:\Users\sympl\projects\javascript-forkify-app\node_modules\@lezer\common\dist\index.d.cts133838477240240000 0
 87C:\Users\sympl\projects\javascript-forkify-app\node_modules\js-yaml\dist\js-yaml.min.js133838481145629330 0
 82C:\Users\sympl\projects\javascript-forkify-app\node_modules\js-yaml\bin\js-yaml.js133838481145629330 0
@@ -2312,6 +2314,7 @@
 105C:\Users\sympl\projects\javascript-forkify-app\node_modules\@parcel\core\test\fixtures\library-scopehoist133838478177259549 1
 84C:\Users\sympl\projects\javascript-forkify-app\node_modules\cosmiconfig\package.json133838477863360000 0
 82C:\Users\sympl\projects\javascript-forkify-app\node_modules\escalade\dist\index.js133764259378510000 0
+69C:\Users\sympl\projects\javascript-forkify-app\dist\icon.e7feb283.png133838525079357036 0
 83C:\Users\sympl\projects\javascript-forkify-app\node_modules\escalade\dist\index.mjs133764259378510000 0
 81C:\Users\sympl\projects\javascript-forkify-app\node_modules\error-ex\package.json133297554763660000 0
 110C:\Users\sympl\projects\javascript-forkify-app\node_modules\@swc\helpers\esm\_unsupported_iterable_to_array.js133838477240370000 0
@@ -2460,7 +2463,7 @@
 109C:\Users\sympl\projects\javascript-forkify-app\node_modules\domutils\node_modules\domhandler\lib\esm\index.js133773646685820000 0
 85C:\Users\sympl\projects\javascript-forkify-app\node_modules\@swc\helpers\src\_jsx.mjs133838477240370000 0
 87C:\Users\sympl\projects\javascript-forkify-app\node_modules\@parcel\graph\lib\BitSet.js133838477232540000 0
-70C:\Users\sympl\projects\javascript-forkify-app\dist\index.f7626f62.css133838508082235301 0
+70C:\Users\sympl\projects\javascript-forkify-app\dist\index.f7626f62.css133838525387862081 0
 110C:\Users\sympl\projects\javascript-forkify-app\node_modules\domutils\node_modules\domhandler\lib\esm\node.d.ts133773646685820000 0
 83C:\Users\sympl\projects\javascript-forkify-app\node_modules\domutils\lib\feeds.d.ts133838477894080000 0
 87C:\Users\sympl\projects\javascript-forkify-app\node_modules\domutils\lib\feeds.d.ts.map133838477894080000 0
@@ -2857,6 +2860,7 @@
 95C:\Users\sympl\projects\javascript-forkify-app\node_modules\@swc\helpers\cjs\_object_spread.cjs133838477240370000 0
 91C:\Users\sympl\projects\javascript-forkify-app\node_modules\caniuse-lite\data\regions\VI.js133838476245610000 0
 101C:\Users\sympl\projects\javascript-forkify-app\node_modules\caniuse-lite\data\features\textencoder.js133838476245610000 0
+70C:\Users\sympl\projects\javascript-forkify-app\dist\icons.bec44919.png133838521657792273 0
 91C:\Users\sympl\projects\javascript-forkify-app\node_modules\caniuse-lite\data\regions\VU.js133838476245610000 0
 102C:\Users\sympl\projects\javascript-forkify-app\node_modules\@swc\helpers\_\_class_apply_descriptor_get133838478176563476 1
 91C:\Users\sympl\projects\javascript-forkify-app\node_modules\caniuse-lite\data\regions\WF.js133838476245610000 0
@@ -2956,6 +2960,7 @@
 105C:\Users\sympl\projects\javascript-forkify-app\node_modules\caniuse-lite\data\features\input-inputmode.js133838476245610000 0
 101C:\Users\sympl\projects\javascript-forkify-app\node_modules\@swc\helpers\_\_ts_generator\package.json133838477240370000 0
 106C:\Users\sympl\projects\javascript-forkify-app\node_modules\caniuse-lite\data\features\css-mixblendmode.js133838476245610000 0
+69C:\Users\sympl\projects\javascript-forkify-app\dist\icon.323200e9.png133838524970791371 0
 109C:\Users\sympl\projects\javascript-forkify-app\node_modules\caniuse-lite\data\features\css-optional-pseudo.js133838476245610000 0
 104C:\Users\sympl\projects\javascript-forkify-app\node_modules\caniuse-lite\data\features\css-page-break.js133838476245610000 0
 91C:\Users\sympl\projects\javascript-forkify-app\node_modules\@parcel\reporter-dev-server\src133838478196675277 1
@@ -4137,7 +4142,7 @@
 125C:\Users\sympl\projects\javascript-forkify-app\node_modules\@parcel\package-manager\test\fixtures\packages\peers-2.0\index.js133838477222740000 0
 91C:\Users\sympl\projects\javascript-forkify-app\node_modules\@parcel\cache\node_modules\.bin133838478197502782 1
 129C:\Users\sympl\projects\javascript-forkify-app\node_modules\@parcel\package-manager\test\fixtures\packages\peers-2.0\package.json133838477222740000 0
-69C:\Users\sympl\projects\javascript-forkify-app\dist\logo.726d37a8.png133838508081273036 0
+69C:\Users\sympl\projects\javascript-forkify-app\dist\logo.726d37a8.png133838525388115634 0
 121C:\Users\sympl\projects\javascript-forkify-app\node_modules\@parcel\package-manager\test\fixtures\packages\peers\index.js133838477222740000 0
 127C:\Users\sympl\projects\javascript-forkify-app\node_modules\@parcel\package-manager\test\fixtures\packages\foo-2.0\package.json133838477222740000 0
 117C:\Users\sympl\projects\javascript-forkify-app\node_modules\@parcel\package-manager\test\fixtures\packages\a\index.js133838477222740000 0
@@ -4449,10 +4454,10 @@
 75C:\Users\sympl\projects\javascript-forkify-app\node_modules\.bin\semver.cmd133838481155953734 0
 75C:\Users\sympl\projects\javascript-forkify-app\node_modules\.bin\semver.ps1133838481155953734 0
 91C:\Users\sympl\projects\javascript-forkify-app\node_modules\.bin\update-browserslist-db.cmd133838481155962378 0
-72C:\Users\sympl\projects\javascript-forkify-app\dist\favicon.8b2f57bf.png133838508082007272 0
-70C:\Users\sympl\projects\javascript-forkify-app\dist\icons.21bad73c.svg133838508082185227 0
+72C:\Users\sympl\projects\javascript-forkify-app\dist\favicon.8b2f57bf.png133838525387506353 0
+70C:\Users\sympl\projects\javascript-forkify-app\dist\icons.21bad73c.svg133838525387506353 0
 69C:\Users\sympl\projects\javascript-forkify-app\dist\index.62406edb.js133838498683533882 0
 73C:\Users\sympl\projects\javascript-forkify-app\dist\index.62406edb.js.map133838498683533882 0
-69C:\Users\sympl\projects\javascript-forkify-app\dist\index.e37f48ea.js133838511860502273 0
-73C:\Users\sympl\projects\javascript-forkify-app\dist\index.e37f48ea.js.map133838511860543132 0
-62C:\Users\sympl\projects\javascript-forkify-app\dist\index.html133838508080583770 0
+69C:\Users\sympl\projects\javascript-forkify-app\dist\index.e37f48ea.js133838530382030958 0
+73C:\Users\sympl\projects\javascript-forkify-app\dist\index.e37f48ea.js.map133838530382060905 0
+62C:\Users\sympl\projects\javascript-forkify-app\dist\index.html133838529099466937 0
