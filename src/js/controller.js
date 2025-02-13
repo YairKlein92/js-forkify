@@ -1,8 +1,8 @@
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import icons from 'url:../img/icons.svg';
+import * as model from './model.js';
 
-console.log(icons);
 const { title } = require('process');
 // where I attach the markup
 const recipeContainer = document.querySelector('.recipe');
@@ -26,33 +26,16 @@ const renderSpinner = function (parentElement) {
   parentElement.insertAdjacentHTML('afterbegin', markup);
 };
 
-// https://forkify-api.jonas.io
 const showRecipe = async function () {
   try {
     const id = window.location.hash.slice(1);
     if (!id) return;
-    // Load recipe
     renderSpinner(recipeContainer);
-    const res = await fetch(
-      `https://forkify-api.jonas.io/api/v2/recipes/${id}}`
-    );
-    const data = await res.json();
 
-    if (!res.ok) throw Error(`${data.message} (${res.status}) `);
+    // Load recipe with function from model.js
+    await model.loadRecipe(id);
+    const { recipe } = model.state;
 
-    console.log(res, data);
-    let { recipe } = data.data;
-    recipe = {
-      id: recipe.id,
-      title: recipe.title,
-      publisher: recipe.publisher,
-      sourceUrl: recipe.sourceUrl,
-      image: recipe.image_url,
-      servings: recipe.servings,
-      cookingTime: recipe.cooking_time,
-      ingredients: recipe.ingredients,
-    };
-    console.log(recipe);
     // rendering recipe
     const markup = `
           <figure class="recipe__fig">
