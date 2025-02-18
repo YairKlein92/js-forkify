@@ -617,14 +617,13 @@ const controlRecipes = async function() {
     // same as:
     // const recipeView = new recipeView(model.state.recipe);
     } catch (err) {
-        alert(err);
+        (0, _recipeViewJsDefault.default).renderError();
     }
 };
-controlRecipes();
-[
-    'hashchange',
-    'load'
-].forEach((e)=>window.addEventListener(e, controlRecipes));
+const init = function() {
+    (0, _recipeViewJsDefault.default).addHandlerRender(controlRecipes);
+};
+init();
 
 },{"7f5f2eee49cf486f":"d5jf4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","core-js/modules/web.immediate.js":"49tUX","regenerator-runtime/runtime":"dXNgZ","./model.js":"Y4A21","./view/recipeView.js":"7Olh7"}],"d5jf4":[function(require,module,exports,__globalThis) {
 // shim for using process in browser
@@ -2669,6 +2668,8 @@ const loadRecipe = async function(id) {
         };
         console.log(state.recipe);
     } catch (err) {
+        // temporary error handling
+        console.error(`${err} bumm bumm`);
         throw err;
     }
 };
@@ -2720,6 +2721,8 @@ var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 class RecipeView {
     #parentElement = document.querySelector('.recipe');
     #data;
+    #errorMessage = 'The recipe was not found';
+    #successMessage = '';
     render(data) {
         this.#data = data;
         const markup = this.#generateMarkup();
@@ -2737,9 +2740,37 @@ class RecipeView {
           </svg>
         </div>
   `;
-        this.#parentElement.innerHTML = '';
+        this.#clear();
         this.#parentElement.insertAdjacentHTML('afterbegin', markup);
     };
+    renderError(message = this.#errorMessage) {
+        const markup = `
+  <div class="error">
+  <div>
+    <svg>
+      <use href="${(0, _iconsSvgDefault.default)}#icon-alert-triangle"></use>
+    </svg>
+  </div>
+  <p>${message}</p>
+</div>`;
+    }
+    renderMessage(message = this.#successMessage) {
+        const markup = `
+  <div class="message">
+  <div>
+    <svg>
+      <use href="${(0, _iconsSvgDefault.default)}#icon-smile"></use>
+    </svg>
+  </div>
+  <p>${message}</p>
+</div>`;
+    }
+    addHandlerRender(handler) {
+        [
+            'hashchange',
+            'load'
+        ].forEach((e)=>window.addEventListener(e, handler));
+    }
     #generateMarkup() {
         return `
     <figure class="recipe__fig">

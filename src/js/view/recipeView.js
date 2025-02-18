@@ -6,7 +6,8 @@ import icons from '../../img/icons.svg';
 class RecipeView {
   #parentElement = document.querySelector('.recipe');
   #data;
-
+  #errorMessage = 'The recipe was not found';
+  #successMessage = '';
   render(data) {
     this.#data = data;
     const markup = this.#generateMarkup();
@@ -18,6 +19,7 @@ class RecipeView {
   #clear() {
     this.#parentElement.innerHTML = '';
   }
+
   renderSpinner = function () {
     const markup = `
   <div class="spinner">
@@ -26,9 +28,35 @@ class RecipeView {
           </svg>
         </div>
   `;
-    this.#parentElement.innerHTML = '';
+    this.#clear();
     this.#parentElement.insertAdjacentHTML('afterbegin', markup);
   };
+
+  renderError(message = this.#errorMessage) {
+    const markup = `
+  <div class="error">
+  <div>
+    <svg>
+      <use href="${icons}#icon-alert-triangle"></use>
+    </svg>
+  </div>
+  <p>${message}</p>
+</div>`;
+  }
+  renderMessage(message = this.#successMessage) {
+    const markup = `
+  <div class="message">
+  <div>
+    <svg>
+      <use href="${icons}#icon-smile"></use>
+    </svg>
+  </div>
+  <p>${message}</p>
+</div>`;
+  }
+  addHandlerRender(handler) {
+    ['hashchange', 'load'].forEach(e => window.addEventListener(e, handler));
+  }
 
   #generateMarkup() {
     return `
