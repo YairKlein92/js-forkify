@@ -2,10 +2,7 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import * as model from './model.js';
 import recipeView from './view/recipeView.js';
-
-const { title } = require('process');
-// where I attach the markup
-const recipeContainer = document.querySelector('.recipe');
+import searchView from './view/searchView.js';
 
 const controlRecipes = async function () {
   try {
@@ -24,8 +21,22 @@ const controlRecipes = async function () {
     recipeView.renderError();
   }
 };
+const controlSearchResults = async function () {
+  try {
+    // get search query
+    const query = searchView.getQuery();
+    if (!query) return;
+    // load search resullts
+    await model.loadSearchResults('pizza');
+    // render results
+    console.log(model.state.search.results, 'render results');
+  } catch (err) {
+    console.log(err);
+  }
+};
 
 const init = function () {
   recipeView.addHandlerRender(controlRecipes);
+  searchView.addHandlerSearch(controlSearchResults);
 };
 init();
