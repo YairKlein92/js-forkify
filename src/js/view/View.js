@@ -15,6 +15,31 @@ export default class View {
   _clear() {
     this._parentElement.innerHTML = '';
   }
+  update(data) {
+    this._data = data;
+    const newMarkup = this._generateMarkup(); // Get the new markup
+
+    // Convert the new markup into a document fragment
+    const newDOM = document.createRange().createContextualFragment(newMarkup);
+
+    // Select the relevant elements in the old and new markup
+    const newServingsElement = newDOM.querySelector(
+      '.recipe__info-data--people'
+    );
+    const oldServingsElement = this._parentElement.querySelector(
+      '.recipe__info-data--people'
+    );
+
+    // Update the servings element if necessary
+    if (newServingsElement.textContent !== oldServingsElement.textContent) {
+      oldServingsElement.textContent = newServingsElement.textContent;
+    }
+
+    // Here you can add more updates as needed for other elements
+
+    // Now replace the old content with the new content (but leave the rest intact)
+    this._parentElement.innerHTML = newMarkup;
+  }
 
   renderSpinner = function () {
     const markup = `

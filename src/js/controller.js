@@ -6,11 +6,7 @@ import searchView from './view/searchView.js';
 import resultsView from './view/resultsView.js';
 import paginationView from './view/paginationView.js';
 import 'core-js/stable';
-import { async } from 'regenerator-runtime';
-// Parcel
-if (module.hot) {
-  module.hot.accept();
-}
+// import { async } from 'regenerator-runtime';
 
 const controlRecipes = async function () {
   try {
@@ -26,6 +22,7 @@ const controlRecipes = async function () {
     // same as:
     // const recipeView = new recipeView(model.state.recipe);
   } catch (err) {
+    console.log(err);
     recipeView.renderError();
   }
 };
@@ -54,10 +51,19 @@ const controlPagination = function (goToPage) {
   // render new pagination buttons
   paginationView.render(model.state.search);
 };
+// actually an eventhandler
+const controlServings = function (newServings) {
+  console.log('Updating servings to:', newServings);
+  model.updateServings(newServings);
+  console.log('Updated state:', model.state.recipe);
+  console.log('Calling recipeView.update...');
+  recipeView.update(model.state.recipe);
+};
 
 const init = function () {
   recipeView.addHandlerRender(controlRecipes);
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
+  recipeView.addHandlerUpdateServings(controlServings);
 };
 init();
