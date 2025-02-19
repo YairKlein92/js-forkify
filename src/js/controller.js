@@ -4,6 +4,14 @@ import * as model from './model.js';
 import recipeView from './view/recipeView.js';
 import searchView from './view/searchView.js';
 import resultsView from './view/resultsView.js';
+import paginationView from './view/paginationView.js';
+import 'core-js/stable';
+import { async } from 'regenerator-runtime';
+// Parcel
+if (module.hot) {
+  module.hot.accept();
+}
+
 const controlRecipes = async function () {
   try {
     const id = window.location.hash.slice(1);
@@ -30,15 +38,26 @@ const controlSearchResults = async function () {
     // load search resullts
     await model.loadSearchResults(query);
     // render results
-    console.log(model.state.search.results, 'render results');
-    resultsView.render(model.state.search.results);
+    resultsView.render(model.getSearchResultsPerPage(1));
+
+    // render initial pagination buttons
+    paginationView.render(model.state.search);
   } catch (err) {
     console.log(err);
   }
 };
 
+const controlPagination = function (goToPage) {
+  // render new results
+  resultsView.render(model.getSearchResultsPerPage(goToPage));
+
+  // render new pagination buttons
+  paginationView.render(model.state.search);
+};
+
 const init = function () {
   recipeView.addHandlerRender(controlRecipes);
   searchView.addHandlerSearch(controlSearchResults);
+  paginationView.addHandlerClick(controlPagination);
 };
 init();
