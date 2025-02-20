@@ -649,10 +649,14 @@ const controlPagination = function(goToPage) {
 };
 // actually an eventhandler
 const controlServings = function(newServings) {
-    console.log('Updating servings to:', newServings);
     _modelJs.updateServings(newServings);
-    console.log('Updated state:', _modelJs.state.recipe);
-    console.log('Calling recipeView.update...');
+    (0, _recipeViewJsDefault.default).update(_modelJs.state.recipe);
+};
+const controlAddBookmark = function() {
+    if (!_modelJs.state.recipe.bookmarked) _modelJs.addBookmark(_modelJs.state.recipe);
+    else _modelJs.deleteBookmark(_modelJs.state.recipe.id);
+    console.log(_modelJs.state.recipe);
+    // update button
     (0, _recipeViewJsDefault.default).update(_modelJs.state.recipe);
 };
 const init = function() {
@@ -660,6 +664,7 @@ const init = function() {
     (0, _searchViewJsDefault.default).addHandlerSearch(controlSearchResults);
     (0, _paginationViewJsDefault.default).addHandlerClick(controlPagination);
     (0, _recipeViewJsDefault.default).addHandlerUpdateServings(controlServings);
+    (0, _recipeViewJsDefault.default).addHandlerBookmark(controlAddBookmark);
 };
 init();
 
@@ -2533,6 +2538,7 @@ try {
 
 },{}],"Y4A21":[function(require,module,exports,__globalThis) {
 // import {async} from 'regenerator-runtime';
+// import { stat } from 'fs';
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "state", ()=>state);
@@ -2540,6 +2546,8 @@ parcelHelpers.export(exports, "loadRecipe", ()=>loadRecipe);
 parcelHelpers.export(exports, "loadSearchResults", ()=>loadSearchResults);
 parcelHelpers.export(exports, "getSearchResultsPerPage", ()=>getSearchResultsPerPage);
 parcelHelpers.export(exports, "updateServings", ()=>updateServings);
+parcelHelpers.export(exports, "addBookmark", ()=>addBookmark);
+parcelHelpers.export(exports, "deleteBookmark", ()=>deleteBookmark);
 var _configJs = require("./config.js");
 var _helpersJs = require("./helpers.js");
 const state = {
@@ -2549,7 +2557,8 @@ const state = {
         results: [],
         page: 1,
         resultsPerPage: (0, _configJs.RESULTS_PER_PAGE)
-    }
+    },
+    bookmarks: []
 };
 const loadRecipe = async function(id) {
     try {
@@ -2567,6 +2576,9 @@ const loadRecipe = async function(id) {
             cookingTime: recipe.cooking_time,
             ingredients: recipe.ingredients
         };
+        // bookmarking saved - going to other recipe won't affect it
+        if (state.bookmarks.some((bookmark)=>bookmark.id === id)) state.recipe.bookmarked = true;
+        else state.recipe.bookmarked = false;
         console.log(state.recipe);
     } catch (err) {
         // temporary error handling
@@ -2587,6 +2599,8 @@ const loadSearchResults = async function(query) {
                 image: request.image_url
             };
         });
+    // reset page to 1 for new results not needed, why?
+    // state.search.page = 1;
     } catch (err) {
         console.error(`${err} bumm bumm`);
         throw err;
@@ -2606,6 +2620,18 @@ const updateServings = function(newServings) {
     // newQ = oldQ * newServings / oldServings // 2 * 8 / 4 = 4
     });
     state.recipe.servings = newServings;
+};
+const addBookmark = function(recipe) {
+    // add bookmark
+    state.bookmarks.push(recipe);
+    // mark current recipe as a bookmark
+    if (recipe.id === state.recipe.id) state.recipe.bookmarked = true;
+};
+const deleteBookmark = function(id) {
+    const index = state.bookmarks.findIndex((element)=>element.id === id);
+    state.bookmarks.splice(index, 1);
+    // mark current recipe as a bookmark
+    if (id === state.recipe.id) state.recipe.bookmarked = false;
 };
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./config.js":"k5Hzs","./helpers.js":"hGI1E"}],"k5Hzs":[function(require,module,exports,__globalThis) {
@@ -2670,8 +2696,15 @@ class RecipeView extends (0, _viewJsDefault.default) {
         this._parentElement.addEventListener('click', function(e) {
             const btn = e.target.closest('.btn--update-servings');
             if (!btn) return;
-            const updateTo = btn.dataset.updateTo;
+            const { updateTo } = btn.dataset;
             if (+updateTo > 0) handler(+updateTo);
+        });
+    }
+    addHandlerBookmark(handler) {
+        this._parentElement.addEventListener('click', function(e) {
+            const btn = e.target.closest('.btn--bookmark');
+            if (!btn) return;
+            handler();
         });
     }
     _generateMarkup() {
@@ -2785,17 +2818,17 @@ class View {
         this._parentElement.innerHTML = '';
     }
     update(data) {
+        if (!data || Array.isArray(data) && data.length === 0) return this.renderError();
         this._data = data;
-        const newMarkup = this._generateMarkup(); // Get the new markup
-        // Convert the new markup into a document fragment
+        const newMarkup = this._generateMarkup(); // get the new markup
+        // convert the new markup into a document fragment
         const newDOM = document.createRange().createContextualFragment(newMarkup);
-        // Select the relevant elements in the old and new markup
-        const newServingsElement = newDOM.querySelector('.recipe__info-data--people');
-        const oldServingsElement = this._parentElement.querySelector('.recipe__info-data--people');
-        // Update the servings element if necessary
+        // select the relevant elements in the old and new markup
+        const newServingsElement = Array.from(newDOM.querySelectorAll('*'));
+        const oldServingsElement = Array.from(this._parentElement.querySelector('*'));
+        // update the servings element if necessary
         if (newServingsElement.textContent !== oldServingsElement.textContent) oldServingsElement.textContent = newServingsElement.textContent;
-        // Here you can add more updates as needed for other elements
-        // Now replace the old content with the new content (but leave the rest intact)
+        //  replace the old content with the new content (but leave the rest intact)
         this._parentElement.innerHTML = newMarkup;
     }
     renderSpinner = function() {

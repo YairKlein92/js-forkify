@@ -53,17 +53,21 @@ const controlPagination = function (goToPage) {
 };
 // actually an eventhandler
 const controlServings = function (newServings) {
-  console.log('Updating servings to:', newServings);
   model.updateServings(newServings);
-  console.log('Updated state:', model.state.recipe);
-  console.log('Calling recipeView.update...');
   recipeView.update(model.state.recipe);
 };
-
+const controlAddBookmark = function () {
+  if (!model.state.recipe.bookmarked) model.addBookmark(model.state.recipe);
+  else model.deleteBookmark(model.state.recipe.id);
+  console.log(model.state.recipe);
+  // update button
+  recipeView.update(model.state.recipe);
+};
 const init = function () {
   recipeView.addHandlerRender(controlRecipes);
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
   recipeView.addHandlerUpdateServings(controlServings);
+  recipeView.addHandlerBookmark(controlAddBookmark);
 };
 init();
